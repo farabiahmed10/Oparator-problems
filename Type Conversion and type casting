@@ -1,0 +1,22 @@
+Type convertion (occurs autometically): by default happen based on which have big size.  
+int - 4  char -1  float - 4  double - 8  long long  - 8  bool - 1
+
+'A' + 6              // 71. calculated based on int 
+char x = 65          // 'A'. Ascii: 48- 0  57- 9  65- A  90- Z  97- a  122- z
+int x = 'A'          // 65 
+char x = 'A'+ 6      // 'G'  
+int x = 6 + 6.7      // 12   
+5.0 / 2;             // 2.5  
+
+Type castings. (Occur by user):
+int(4.5)  int('A')    //converted in int     
+float(4)  float('A')  //converted in float  
+char(45)  char(4.5)   //converted in char  
+to_string(45) to_string(4.5)  'A'+"" //bcz to_string convert to int first
+
+string to something
+stoi("45") stof("4.5")  stod("double")  stoll("long long")
+
+numaric char to int
+int a = '0'-'0'  // char to int
+char a = 0 +'0'  // int to char 
