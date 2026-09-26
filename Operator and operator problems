@@ -1,0 +1,53 @@
+Arithmatic: + - * / %  ++ --
+Relational: ==, !=, > , <, <=, >=
+Logcal    : &&, ||, !
+Assingment: =, +=, -=, *=, /=, %=, <<=, >>=, ^=, |=, &=
+Bitwise   : &, | , ~,  ^ , <<, >>   //convert to bin, then oparation. then convert back.
+Misc      : pointer* , reference& , castings , condition ? x:y, sizeof()
+
+Oparator precedence:
+1. () [] ++ --
+2.   ~  !
+3.  * / %
+4.   + -
+5.  <<  >>
+6. < <= > >=
+7.  == !=
+8.  & ^ |
+9.   &&
+10.  ||
+11. condition ? :
+12. assingnment oparators
+
+
+Find the outputs: 
+1) 
+   i=1,j=2
+   k= i + j + i++ + j++ + ++i + ++j  //i=3 j=4 k=13
+     //1 //2  //1   //2   //3   //4
+2)
+   i=10,j=20
+   k= i-- - i++ + --j - ++j + --i - j-- + ++i - j++ //i=10 j=20 k=-20
+     //10  //9   //19  //20  //9   //20  //10  //19
+3) 
+   a=6, b=4
+   c = (a & b) + (a | b) - (a ^ b) + (a && b) + (a || b);  //Find c
+   x=2, y=3
+   z = (x++ > y ? ++x : y++) + (x > --y ? x : y)  //find x
+   m=8, n=2
+   o = (m >> 1) + (n << 2) + (++m) - (n--)  //find o
+4)  
+   int a = 5, b = 10;
+   for (int t = 1; t <= 3; t++) {
+        bool res = (a++ < b) && (++b > a) || (a == b); //find res
+    } 
+5) 
+   int p = 10, q = 5;
+   for (int t = 1; t <= 3; t++) {
+       int r = (p += q) - (q -= 2) + (++p) * (--q);
+    }
+6) 
+    a = 5, b = 10, c = 3, d = 2;
+    result = (a++ + --b) * (c | d) - (a & b) / (c ^ d) + (a << 1) - (b >> 2); 
+    result2 = result + (a > b && c < d) + (a == c || b != d) + (~c) + (!d) + (a ? b : c) + (c += d) * (b -= a); 
+    cout<< a << b << c << d << result << result2;
